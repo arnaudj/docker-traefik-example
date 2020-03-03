@@ -29,7 +29,7 @@ services:
   whoami:
     # A container that exposes an API to show its IP address
     image: containous/whoami
-    container_name: "simple-service"
+    # ports: - "80" # Uncomment to make containers visible on the host, via ephemeral ports.
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.whoami.rule=Path(`/whoami`)"
